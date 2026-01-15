@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyAURG4DVM5VEzfeV87E5a8qDUf_0_6JXik";
+const API_KEY = "";
 const MODEL = "models/gemini-2.5-flash";
 
 document.getElementById("generateBtn").onclick = () => generateQuiz();
