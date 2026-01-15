@@ -237,6 +237,3 @@ function evaluateQuiz() {
   scoreHeading.textContent = `Score: ${score} / ${quizData.length}`;
   resultBox.prepend(scoreHeading);
 }
-
-
-
