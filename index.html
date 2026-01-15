@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <h1 class="title">Quiz Generator</h1>
+
+        <!-- INPUT CARD -->
+        <div class="card glass form-box">
+            <label for="topic">Enter Topic</label>
+            <input type="text" id="topic" placeholder="Eg: HTML, CSS, Javascript">
+
+            <label for="count">Number of Questions</label>
+            <input type="number" id="count" min="1" max="20" >
+
+            <label for="difficulty">Select Difficulty</label>
+            <select id="difficulty" class="difficulty-select" required>
+                <option value="" disabled selected hidden>
+                    Select one--
+                </option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <button id="generateBtn" class="btn primary">⚡ Generate Quiz</button>
+        </div>
+
+        <!-- OUTPUT AREA -->
+        <div id="output" class="quiz-output"></div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

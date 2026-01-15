@@ -1,0 +1,220 @@
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------------- BODY ---------------- */
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #375585,
+    #1b78a3
+  );
+  display: flex;
+  justify-content: center;
+  padding: 40px 15px;
+  color: #fff;
+}
+
+
+
+/* ---------------- LAYOUT ---------------- */
+.wrapper {
+  width: 100%;
+  max-width: 760px;
+}
+
+/* ---------------- TITLE ---------------- */
+.title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+  letter-spacing: 0.5px;
+}
+
+/* ---------------- GLASS CARD ---------------- */
+.glass {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------------- FORM CARD ---------------- */
+.form-box {
+  padding: 26px;
+  margin-bottom: 28px;
+}
+
+.form-box label {
+  font-weight: 500;
+  margin-top: 14px;
+  display: block;
+}
+
+.form-box input,
+.form-box select {
+  width: 100%;
+  padding: 13px;
+  margin-top: 6px;
+  border-radius: 14px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  outline: none;
+}
+
+/* ---------------- BUTTON ---------------- */
+.btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 22px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #ffffff, #e0e7ff);
+  color: #4338ca;
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* ---------------- LOADER ---------------- */
+.loader {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 18px 0;
+}
+
+/* ---------------- QUIZ OUTPUT ---------------- */
+.quiz-output {
+  margin-top: 20px;
+}
+
+/* ---------------- QUESTION CARD ---------------- */
+.question-card {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 24px;
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.question-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* ---------------- OPTIONS ---------------- */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.22);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateX(4px);
+}
+
+.option input[type="radio"] {
+  accent-color: #a5b4fc;
+  transform: scale(1.15);
+}
+
+.option label {
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* ---------------- RESULTS ---------------- */
+#result {
+  margin-top: 30px;
+}
+
+.result-item {
+  background: rgba(255, 255, 255, 0.16);
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+.result-item p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* ---------------- SCORE ---------------- */
+#result h2 {
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+/* ---------------- HR ---------------- */
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 16px 0;
+}
+
+/* -------- Difficulty Select -------- */
+.difficulty-select {
+    background: rgba(175, 169, 169, 0.9)
+}
+
+/* Option colors */
+
+.difficulty-select option[value="easy"] {
+  color: #218847;
+  font-weight: 600;
+}
+
+.difficulty-select option[value="medium"] {
+  color: #eda70f;
+  font-weight: 600;
+}
+
+.difficulty-select option[value="hard"] {
+  color: #ed0f0f;
+  font-weight: 600;
+}
+
