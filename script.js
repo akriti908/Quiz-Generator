@@ -1,21 +1,8 @@
 const API_KEY = "";
 const MODEL = "models/gemini-2.5-flash";
-async function generateQuiz() {
-  const topic = document.getElementById("topic").value.trim();
-  const output = document.getElementById("output");
-
-  if (!API_KEY) {
-    output.innerHTML = `
-      ⚠️ Demo Mode: Quiz generation disabled.
-      <br>Add your API key in script.js for live quiz generation.
-    `;
-    return;
-  }
-
-  document.getElementById("generateBtn").onclick = () => generateQuiz();
 
 let quizData = [];  // store questions, options, answers, explanation
-
+document.getElementById("generateBtn").onclick = () => generateQuiz();
 // Helper: normalize answer to single uppercase letter A/B/C/D
 // Accepts values like "A", "A)", "A. Option", "B. Paris", "B) Paris" and returns "A".."D"
 function normalizeAnswer(ans) {
@@ -32,6 +19,14 @@ async function generateQuiz() {
   const difficulty = document.getElementById("difficulty").value;
   const output = document.getElementById("output");
 
+  if (!API_KEY) {
+    output.innerHTML = `
+      ⚠️ Demo Mode: Quiz generation disabled.
+      <br>Add your API key in script.js for live quiz generation.
+    `;
+    return;
+  }
+  
   if (!topic) {
     output.textContent = "❌ Please enter a topic.";
     return;
@@ -243,6 +238,5 @@ function evaluateQuiz() {
   resultBox.prepend(scoreHeading);
 }
 
-}
 
 
