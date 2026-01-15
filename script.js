@@ -1,7 +1,18 @@
 const API_KEY = "";
 const MODEL = "models/gemini-2.5-flash";
+async function generateQuiz() {
+  const topic = document.getElementById("topic").value.trim();
+  const output = document.getElementById("output");
 
-document.getElementById("generateBtn").onclick = () => generateQuiz();
+  if (!API_KEY) {
+    output.innerHTML = `
+      ⚠️ Demo Mode: Quiz generation disabled.
+      <br>Add your API key in script.js for live quiz generation.
+    `;
+    return;
+  }
+
+  document.getElementById("generateBtn").onclick = () => generateQuiz();
 
 let quizData = [];  // store questions, options, answers, explanation
 
@@ -231,3 +242,7 @@ function evaluateQuiz() {
   scoreHeading.textContent = `Score: ${score} / ${quizData.length}`;
   resultBox.prepend(scoreHeading);
 }
+
+}
+
+
